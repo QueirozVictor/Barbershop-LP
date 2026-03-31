@@ -1,0 +1,60 @@
+@use "variables";
+@use 'mixins';
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Rubik"
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.superior {
+    background: url("../img/superior.jpg") center/cover fixed;
+    @include mixins.padding();
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    font-weight: variables.$font-bold;
+    @include mixins.padding();
+    @include mixins.border();
+}
+
+.btn-primary{
+    background-color: variables.$primary-color;
+    color: variables.$font-color;
+}
+
+.btn-light{
+    background-color: variables.$primary-color-light;
+    color: variables.$font-color-dark;
+}
+
+.input{
+    background-color: variables.$overlay;
+    border: none;
+    box-shadow: variables.$shadow-color;
+    font-weight: variables.$font-bold;
+    @include mixins.padding();
+    @include mixins.border();
+
+    &::placeholder{
+        color: variables.$font-color;
+    }
+}
+
+
+.hr-base{
+    margin-top: variables.$base-space;
+    background-color: none;
+}
+
+
+.link{
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: black;
+}

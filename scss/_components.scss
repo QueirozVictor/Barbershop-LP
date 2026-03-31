@@ -1,0 +1,97 @@
+@use 'variables';
+@use 'mixins';
+
+
+//Upper menu
+.header__menu{
+    width: 50px;
+    height: 50px;
+    border-radius: variables.$border;
+    cursor: pointer;
+    border: none;
+
+    &--img{
+        width: 30px ;
+    }
+}
+
+ .header__nav{
+        display: none;
+        box-shadow: variables.$shadow-color;
+        border-radius: variables.$border;
+        
+        &__list{
+            gap: 20px;
+            align-items: center;
+            list-style: none;
+            cursor: pointer;
+            color: variables.$font-color;
+
+                &--link{
+                    &:hover{text-decoration: underline;}      
+                }
+        }
+
+        &--active{
+            background-color: variables.$dark;
+            font-size: variables.$font-menu;
+            font-weight: variables.$font-bold;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            z-index: 999;
+            @include mixins.border();
+            @include mixins.padding();
+        }
+}
+
+//Scheduling Form
+.superior__agendamento__form{
+    background-color: variables.$overlay;
+    display: flex;
+    flex-direction: column;
+    box-shadow: variables.$shadow-color;
+    @include mixins.width(70vw);
+    @include mixins.border();
+    @include mixins.padding(20px 10px);
+    @include mixins.margin();
+    @include mixins.gap();
+    margin-top: variables.$base-space*4;
+
+    @media(min-width: 600px){
+        width: 40vw;
+    }
+
+    &--row{
+        display: flex;
+        @include mixins.gap();
+
+        &__input{
+            width: 65%;
+            &[type="datetime-local"]{
+                color: variables.$font-color;
+            }
+            &[type="datetime-local"]::-webkit-calendar-picker-indicator{
+                filter: invert(1);
+                cursor:pointer;
+                }
+            }
+
+            &__btn{
+                width: 30%;
+            }
+    }
+    &--title{
+        font-size: variables.$font-g;
+        font-weight: variables.$font-bold;
+        color: variables.$font-color;
+        text-align: variables.$standard-align;
+        padding: variables.$base-space;
+    }
+}
+
+.form--row__input{
+    width: 50%;
+}
+

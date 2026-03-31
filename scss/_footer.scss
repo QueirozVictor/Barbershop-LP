@@ -1,0 +1,122 @@
+@use 'variables';
+@use 'mixins';
+
+.footer{
+    background-color: variables.$light;
+
+    &__content{
+        display: flex;
+        flex-direction: space-between;
+        padding: variables.$base-space*2;
+
+        &__location{
+            @include mixins.width(50%);
+            margin:variables.$base-space*2;
+
+            @media(min-width: 600px){
+                width: 25%;
+            }
+
+            &--title{
+                margin-bottom: variables.$base-space*2;
+            }
+
+            &--location{
+                font-size: variables.$font-p;
+                
+            }
+        }
+
+        &__menu{
+            width: 25%;
+            margin:variables.$base-space;
+            margin:variables.$base-space*2;
+            padding-left: variables.$base-space*4;
+
+            @media(max-width: 600px){
+                display: none;
+            }
+
+            
+
+            &--title{
+                margin-bottom: variables.$base-space*2;
+            }
+
+            &--links{
+                display: flex;
+                flex-direction: column;
+                font-size: variables.$font-p;
+                
+            }
+        }
+
+        &__quick-links{
+            width: 25%;
+            margin:variables.$base-space;
+            margin:variables.$base-space*2;
+
+            @media(max-width: 600px){
+                display: none;
+            }
+            
+
+            &--title{
+                margin-bottom: variables.$base-space*2;
+            }
+
+            &--links{
+                display: flex;
+                flex-direction: column;
+                font-size: variables.$font-p;
+                
+            }
+        }
+
+        &__operational{
+            width: 25%;
+            margin:variables.$base-space;
+            margin:variables.$base-space*2;
+
+            @media(max-width: 600px){
+                @include mixins.width(50%);
+                text-align: right;
+            }
+
+            &--title{
+                margin-bottom: variables.$base-space*2;
+            }
+
+            &--info{
+                font-size: variables.$font-p;
+            }
+            &--btn{
+                margin-top: variables.$base-space;
+                width: 85%;
+                font-size: variables.$font-p;
+            }
+        }
+    }
+
+    &__social{
+        display: flex;
+        justify-content: space-between;
+        padding: variables.$base-space;
+
+        &__links{
+            display: flex;
+            gap: 30px;
+            padding-left: variables.$base-space*2;
+
+            &--icon{
+                width: 25px;
+            }
+        }
+
+        &--info{
+                font-size: variables.$font-p;
+                align-self: center;
+                padding-right: variables.$base-space;
+            }
+    }
+}

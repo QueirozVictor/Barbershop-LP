@@ -1,0 +1,31 @@
+@use 'variables';
+
+//Font-size
+@mixin font-size($size: 1rem){
+    font-size: $size;
+}
+
+//Vw / Vh
+@mixin width($view: 100vw){
+    width: $view;
+}
+@mixin height($height: 100vh){
+    height: $height;
+}
+
+//Border
+@mixin border($border: 8px){
+    border-radius: $border;
+}
+
+//Base-space
+@mixin padding($space: 10px){
+    padding: $space;
+}
+@mixin margin($space: 10px){
+    margin: $space;
+}
+@mixin gap($space: 10px){
+    gap: $space;
+}
+

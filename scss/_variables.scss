@@ -1,0 +1,33 @@
+//Fontes
+$font-p: 0.7rem;
+$font-m:1.8rem;
+$font-g: 2.3rem;
+$font-tel: 1.2rem;
+$font-menu: 1.2rem;
+$font-bold: 700;
+$font-response: clamp(1rem, 2vw, 1.5rem);
+$title:1.5rem;
+
+//Cores
+$primary-color: #eb7f20;
+$primary-color-light: #e09d62;
+$btn-color-hover: #cb6812;
+$dark: #534a45;
+$light: #f5f5f5;
+$beige: #e4dac9;
+$font-color: #f7f7f7;
+$font-color-dark: #333;
+$shadow-color-strong: 0px 0px 8px white;
+$shadow-color: 0px 0px 3px #534a45;
+$overlay: rgba(0, 0, 0, 0.281);
+
+//Espaçamentos
+$base-space: 10px;
+$gap: 20px;
+$standard-align: center;
+$right: right;
+$left: left;
+$border: 8px;
+$border-style: 1px solid black;
+
+

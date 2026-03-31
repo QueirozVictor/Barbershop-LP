@@ -1,0 +1,28 @@
+@use 'variables';
+
+.card-slider{
+
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+padding: variables.$base-space*2;
+gap: variables.$gap;
+
+    &__card{
+        width: 200px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+
+        @media(min-width:800px){
+            width: 150px;
+        }
+        &--img{
+            width: 100%;
+        }
+
+    }
+}
+.card-slider::-webkit-scrollbar{
+    display:none;
+}
+

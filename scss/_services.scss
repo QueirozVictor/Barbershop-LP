@@ -1,0 +1,39 @@
+@use 'variables';
+
+.services{
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$beige;
+    padding: variables.$base-space;
+
+    @media(min-width:600px){
+        flex-direction: row;
+    }
+
+    &__info{
+        display: flex;
+        padding: variables.$base-space;
+        text-align: variables.$standard-align;
+
+        &__box{
+            display: flex;
+            flex-direction: column;
+            gap: variables.$gap;
+
+             @media(min-width:600px){
+                text-align: variables.$left;
+                width: 30vw;
+             }
+
+             &--title{
+                font-size: variables.$font-g;
+             }
+
+            &--paragrafo{
+                font-size: variables.$font-response;
+            }
+                
+            
+        }
+    }
+}

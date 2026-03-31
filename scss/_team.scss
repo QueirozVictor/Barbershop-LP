@@ -1,0 +1,295 @@
+@use "variables";
+@use "mixins";
+
+.depoimento{
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$beige;
+    padding: variables.$base-space*3;
+    
+
+    @media(min-width: 800px){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    &__info{
+        background-color: variables.$primary-color-light;
+        padding: variables.$base-space*2;
+        border-radius: variables.$border;
+        max-height: 300px;
+        box-shadow: variables.$shadow-color;
+        
+
+        @media(min-width: 800px){
+             width: 40vw;
+        }
+
+        &__content{ 
+        @include mixins.height(80px);
+        
+
+            &__paragrafo{
+                display: none;
+                
+                &.active{
+                    display: block;
+                }
+            }
+        }
+
+        
+
+        &__indicators{
+            display:flex;
+            justify-content: center;
+            gap:10px;
+            margin:15px 0;
+            padding: variables.$base-space;
+
+            &--line{
+                width:30px;
+                height:3px;
+                background:black;
+                transition:0.3s;
+                opacity: 0.4;
+
+                &.active{
+                background:black;
+                width:40px;
+                opacity: 1;
+                }
+            }
+
+            
+        }
+
+        &__bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items:variables.$standard-align ;
+
+            &--client{
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+            }
+
+            &__btn{
+                margin: variables.$base-space;
+
+                &--left{
+                    background-color: variables.$primary-color-light;
+                    border:variables.$border-style;
+                    transform: rotate(180deg);
+                    
+                }
+
+                &--right{
+                    background-color: variables.$primary-color-light;
+                    border:variables.$border-style;
+                }
+            }
+        }
+        
+    }
+
+
+}
+
+.meet-us{
+    background-color: variables.$light;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title{
+        text-align: center;
+        padding: variables.$base-space*2;
+        font-size: variables.$font-g;
+    }
+
+    &__info{
+        font-size: variables.$font-response;
+        text-align: variables.$standard-align;
+        align-self: variables.$standard-align;
+        padding: variables.$base-space*2;
+    }
+}
+
+.team{
+    background-color: variables.$light;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$base-space;
+    justify-content: center;
+    padding-bottom: variables.$base-space*5;
+
+    @media(min-width: 900px){
+        flex-direction: row;
+    }
+
+    &__ourTeam{
+        display: flex;
+        &__info{
+            display: flex;
+            gap: variables.$base-space; 
+            margin: auto;
+            &--member-1{
+                display: flex;
+                flex-direction: column;
+                background: url(../img/barber-1.png) no-repeat center center/cover;
+                width: 150px;
+                height: 302px;
+                border-radius: variables.$border;
+                padding: variables.$base-space;
+
+                @media(min-width: 800px){
+                    width: 250px;
+                    height: 400px;
+                }
+                
+
+                &--name{
+                    background-color: variables.$dark;
+                    color: variables.$light;
+                    border-radius: variables.$border;
+                    margin: variables.$base-space;
+                    align-self: center;
+                    margin-top: auto;
+                    font-size: variables.$font-p;
+                    padding: variables.$base-space;
+                }
+
+                &--link{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-end;
+                    gap: 5px;
+                }
+            }
+
+            &--member-2{
+                display: flex;
+                flex-direction: column;
+                background: url(../img/barber-2.png ) no-repeat center center/cover;
+                width: 150px;
+                height: 302px;
+                border-radius: variables.$border;
+                padding: variables.$base-space;
+
+                 @media(min-width: 800px){
+                    width: 250px;
+                    height: 400px;
+                }
+
+                
+
+                &--name{
+                    background-color: variables.$dark;
+                    color: variables.$light;
+                    border-radius: variables.$border;
+                    margin: variables.$base-space;
+                    align-self: center;
+                    margin-top: auto;
+                    font-size: variables.$font-p;
+                    padding: variables.$base-space;
+                }
+
+                &--link{
+                    align-self: flex-end;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+
+            &--member-3{
+                display: flex;
+                flex-direction: column;
+                background: url(../img/barber-3.png) no-repeat center center/cover;
+                width: 150px;
+                height: 302px;
+                border-radius: variables.$border;
+                padding: variables.$base-space;
+
+                @media(min-width: 800px){
+                    width: 250px;
+                    height: 400px;
+                }
+
+                &--name{
+                    background-color: variables.$dark;
+                    color: variables.$light;
+                    border-radius: variables.$border;
+                    margin: variables.$base-space;
+                    align-self: center;
+                    margin-top: auto;
+                    font-size: variables.$font-p;
+                    padding: variables.$base-space;
+                }
+
+                &--link{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-end;
+                    gap: 5px;
+                    
+                }
+            }
+        }
+    }
+}
+
+.join-us{
+    display: flex;
+    background: url(../img/join-us.jpg) no-repeat center/cover fixed;
+    @include mixins.height(250px);
+    border-radius: variables.$border;
+    margin-top: variables.$base-space*3;
+
+    @media(min-width: 900px){
+        background: url(../img/join-us.jpg) no-repeat center/cover;
+        width: 290px;
+        height: 430px;
+    }
+
+    &--info{
+        align-self: flex-end;
+        background-color: variables.$light;
+        padding: variables.$base-space;
+        margin: variables.$base-space;
+        border-radius: variables.$border;
+        @media(max-width: 800px){
+            width: 100%;
+        }
+
+        &--call{
+            text-align: justify;
+            @media(max-width: 800px){
+            font-size: variables.$title;
+            }
+        }
+
+        &--link{
+            font-size: variables.$font-p;
+            @media(max-width: 800px){
+            font-size: variables.$font-response;
+            }
+        }
+    }
+
+}
+
+.btn-join-us{
+    background-color: variables.$primary-color-light;
+    width: 20px;
+    margin: 2px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}

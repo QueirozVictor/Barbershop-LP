@@ -1,0 +1,208 @@
+@use "variables";
+@use 'mixins';
+
+
+.superior__call{
+    display: flex;
+    flex-direction: column;
+
+    &__paragrafo{
+        display: none;
+    }
+    &__tittle{
+        display: none;
+    }
+    @media(min-width:600px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+         &__paragrafo{
+            display: flex;
+            width: 30vw;
+            align-items: variables.$standard-align;
+            color: variables.$font-color;
+            font-size: variables.$font-p;
+            margin: variables.$base-space;
+            padding: variables.$base-space*2;
+        }
+
+        &__tittle{
+            display: flex;
+            width: 50vw;
+            text-align: right;
+            color: variables.$font-color;
+            font-size: variables.$font-g;
+        }
+    }
+        
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$dark;
+    padding: variables.$base-space;
+    
+    @media(min-width: 600px){
+        justify-content: space-between;
+        flex-direction: row;
+        padding: variables.$base-space*3;
+    }
+
+    &__title{
+        text-align: variables.$standard-align;
+        font-size: variables.$font-g;
+        font-weight: variables.$font-bold;
+        color: variables.$font-color;
+
+        @media(min-width: 600px){
+            text-align: variables.$left;
+        }
+    }
+
+    &__paragrafo{
+        text-align: variables.$standard-align;
+        color: variables.$font-color;
+
+        @media(min-width: 600px){
+        font-size: variables.$font-p;
+        text-align: variables.$left;
+        }
+    }
+
+    &__info-box{
+        display: flex;
+        flex-direction: column;
+        @include mixins.gap(20px);
+        @media(min-width: 600px){
+            width: 30vw;
+        }
+        &--btn{
+            width: 50%;
+            align-self: center;
+            @include mixins.margin(20px);
+
+            @media(min-width: 600px){
+                width: 40%;
+                align-self: flex-start;
+                @include mixins.margin(0px);
+            &:hover{
+                background-color: variables.$btn-color-hover;
+                color: variables.$font-color;
+            }
+            }
+        }
+    }
+
+    &__map{
+        width: 400px;
+        height: 300px;
+        align-self: variables.$standard-align;;
+        @media(min-width:600px){
+            justify-content: variables.$standard-align;
+            width: 200px;
+            height: 250px;
+            @include mixins.width(30vw);
+        }
+        
+    }
+    
+    &__info{
+        display: flex;
+        text-align: variables.$standard-align;
+        justify-content: variables.$standard-align;
+        @include mixins.margin(20px 0px);
+
+        @media(min-width:600px){
+            flex-direction: column;
+            width: 30vw;
+        }
+
+        &__grid{
+            display: flex;
+            @include mixins.width(50vw);
+
+            @media(min-width:600px){
+                @include mixins.width(30vw);
+            }
+
+            &--map{
+            background-color: variables.$light;
+            margin: variables.$base-space;
+            padding: variables.$base-space;
+            border-radius: variables.$border;
+            width: 40px;
+            height: 40px;
+            }
+
+            &--adress{
+            margin: variables.$base-space;
+
+            &--title{
+                font-size: variables.$font-m;
+                font-weight: variables.$font-bold;
+                color: variables.$font-color;
+                text-align: variables.$left;
+            }
+
+            &--paragrafo{
+                color: variables.$font-color;
+                font-size: variables.$font-p;
+                text-align: variables.$left;
+                margin-top: variables.$base-space;
+
+                @media(min-width:600px){
+                    margin-bottom: variables.$base-space*3;
+                }
+            }
+        }
+        }
+
+        &__hr{
+            margin: variables.$base-space;
+        }
+
+        &__grid2{
+            display: flex;
+            
+            @media(min-width:600px){
+                margin-top: variables.$base-space*3;
+            }
+
+            &__imgtel{
+                background-color: variables.$light;
+                margin: variables.$base-space;
+                padding: variables.$base-space;
+                border-radius: variables.$border;
+                width: 40px;
+                height: 40px;
+            }
+
+            &__info{
+                margin: variables.$base-space;
+
+                &--title{
+                font-size: variables.$font-tel;
+                color: variables.$font-color;
+                text-align: variables.$left;
+                }
+
+                &--hours{
+                    color: variables.$font-color;
+                    font-size: variables.$font-p;
+                    text-align: variables.$left;
+                    margin-top: variables.$base-space*2;
+
+                    @media(min-width:600px){
+                        margin-top: variables.$base-space;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}
