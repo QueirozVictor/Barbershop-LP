@@ -100,13 +100,17 @@
 
     &__social{
         display: flex;
-        justify-content: space-between;
         padding: variables.$base-space;
+        @media(max-width: 600px){
+                justify-content: space-between;
+            }
 
         &__links{
             display: flex;
-            gap: 30px;
-            padding-left: variables.$base-space*2;
+            @media(max-width: 600px){
+                gap: 30px;
+                padding-left: variables.$base-space*2;
+            }
 
             &--icon{
                 width: 25px;
@@ -115,8 +119,13 @@
 
         &--info{
                 font-size: variables.$font-p;
-                align-self: center;
-                padding-right: variables.$base-space;
+                text-align: right;
+                
+
+                @media(min-width: 600px){
+                    padding-right: variables.$base-space;
+                    align-self: center;
+                }
             }
     }
 }

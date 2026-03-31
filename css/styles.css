@@ -85,7 +85,7 @@
   display: block;
   position: absolute;
   top: 5px;
-  right: 50px;
+  right: 60px;
   z-index: 999;
   border-radius: 8px;
   padding: 10px;
@@ -275,7 +275,7 @@
   }
 }
 .location__map {
-  width: 400px;
+  width: 100%;
   height: 300px;
   align-self: center;
 }
@@ -289,6 +289,7 @@
 }
 .location__info {
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   margin: 20px 0px;
@@ -301,7 +302,6 @@
 }
 .location__info__grid {
   display: flex;
-  width: 50vw;
 }
 @media (min-width: 600px) {
   .location__info__grid {
@@ -323,17 +323,22 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #f7f7f7;
-  text-align: left;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .location__info__grid--adress--title {
+    text-align: left;
+  }
 }
 .location__info__grid--adress--paragrafo {
   color: #f7f7f7;
   font-size: 0.7rem;
-  text-align: left;
   margin-top: 10px;
 }
 @media (min-width: 600px) {
   .location__info__grid--adress--paragrafo {
     margin-bottom: 30px;
+    text-align: left;
   }
 }
 .location__info__hr {
@@ -341,11 +346,7 @@
 }
 .location__info__grid2 {
   display: flex;
-}
-@media (min-width: 600px) {
-  .location__info__grid2 {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
 }
 .location__info__grid2__imgtel {
   background-color: #f5f5f5;
@@ -359,19 +360,26 @@
   margin: 10px;
 }
 .location__info__grid2__info--title {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #f7f7f7;
-  text-align: left;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .location__info__grid2__info--title {
+    text-align: left;
+    font-size: 1.2rem;
+  }
 }
 .location__info__grid2__info--hours {
   color: #f7f7f7;
   font-size: 0.7rem;
-  text-align: left;
   margin-top: 20px;
 }
 @media (min-width: 600px) {
   .location__info__grid2__info--hours {
     margin-top: 10px;
+    text-align: left;
   }
 }
 
@@ -486,7 +494,7 @@
   background-color: #e09d62;
   padding: 20px;
   border-radius: 8px;
-  max-height: 300px;
+  height: 300px;
   box-shadow: 0px 0px 3px #534a45;
 }
 @media (min-width: 800px) {
@@ -495,7 +503,7 @@
   }
 }
 .depoimento__info__content {
-  height: 80px;
+  height: 150px;
 }
 .depoimento__info__content__paragrafo {
   display: none;
@@ -582,6 +590,7 @@
 }
 .team__ourTeam__info {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin: auto;
 }
@@ -589,8 +598,8 @@
   display: flex;
   flex-direction: column;
   background: url(../img/barber-1.png) no-repeat center center/cover;
-  width: 150px;
-  height: 302px;
+  width: 250px;
+  height: 402px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -620,8 +629,8 @@
   display: flex;
   flex-direction: column;
   background: url(../img/barber-2.png) no-repeat center center/cover;
-  width: 150px;
-  height: 302px;
+  width: 250px;
+  height: 402px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -651,8 +660,8 @@
   display: flex;
   flex-direction: column;
   background: url(../img/barber-3.png) no-repeat center center/cover;
-  width: 150px;
-  height: 302px;
+  width: 250px;
+  height: 402px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -816,21 +825,34 @@
 }
 .footer__social {
   display: flex;
-  justify-content: space-between;
   padding: 10px;
+}
+@media (max-width: 600px) {
+  .footer__social {
+    justify-content: space-between;
+  }
 }
 .footer__social__links {
   display: flex;
-  gap: 30px;
-  padding-left: 20px;
+}
+@media (max-width: 600px) {
+  .footer__social__links {
+    gap: 30px;
+    padding-left: 20px;
+  }
 }
 .footer__social__links--icon {
   width: 25px;
 }
 .footer__social--info {
   font-size: 0.7rem;
-  align-self: center;
-  padding-right: 10px;
+  text-align: right;
+}
+@media (min-width: 600px) {
+  .footer__social--info {
+    padding-right: 10px;
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

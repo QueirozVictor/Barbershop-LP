@@ -18,7 +18,7 @@
         background-color: variables.$primary-color-light;
         padding: variables.$base-space*2;
         border-radius: variables.$border;
-        max-height: 300px;
+        height: 300px;
         box-shadow: variables.$shadow-color;
         
 
@@ -27,7 +27,7 @@
         }
 
         &__content{ 
-        @include mixins.height(80px);
+        @include mixins.height(150px);
         
 
             &__paragrafo{
@@ -136,14 +136,15 @@
         display: flex;
         &__info{
             display: flex;
+            flex-direction: column;
             gap: variables.$base-space; 
             margin: auto;
             &--member-1{
                 display: flex;
                 flex-direction: column;
                 background: url(../img/barber-1.png) no-repeat center center/cover;
-                width: 150px;
-                height: 302px;
+                width: 250px;
+                height: 402px;
                 border-radius: variables.$border;
                 padding: variables.$base-space;
 
@@ -176,8 +177,8 @@
                 display: flex;
                 flex-direction: column;
                 background: url(../img/barber-2.png ) no-repeat center center/cover;
-                width: 150px;
-                height: 302px;
+                width: 250px;
+                height: 402px;
                 border-radius: variables.$border;
                 padding: variables.$base-space;
 
@@ -211,8 +212,8 @@
                 display: flex;
                 flex-direction: column;
                 background: url(../img/barber-3.png) no-repeat center center/cover;
-                width: 150px;
-                height: 302px;
+                width: 250px;
+                height: 402px;
                 border-radius: variables.$border;
                 padding: variables.$base-space;
 
