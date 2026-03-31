@@ -1,1 +1,1 @@
-# Barbershop-LP
+[![preview project](img/preview.png)](https://queirozvictor.github.io/Barbershop-LP/)
