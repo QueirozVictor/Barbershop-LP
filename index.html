@@ -6,6 +6,7 @@
     <title>Barbershop</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="Js/menu.js" defer></script>
+    <script src="Js/form.js" defer></script>
 
 </head>
 <body class="geral">
@@ -29,15 +30,15 @@
             <button class="btn header__btn"> Contato</button>
         </header>
 
-        <section class="superior_agendamento">
+        <section id="agendar" class="superior_agendamento">
             <form action="" class="superior__agendamento__form">
                 <h2 class="superior__agendamento__form--title">Agende seu horário</h2>
-                <input type="text" placeholder="Nome" class="input" required>
-                <input type="email" placeholder="Email" class="input" required>
-                <input type="tel" placeholder="Telefone" class="input" required>
+                <input id="nome" type="text" placeholder="Nome" class="input" required >
+                <input id="email" type="email" placeholder="Email" class="input" required>
+                <input id="tel" type="tel" placeholder="Telefone" class="input" required>
                 <div class="superior__agendamento__form--row">
-                    <input type="datetime-local"  class=" input superior__agendamento__form--row__input">
-                    <button class="btn btn-primary superior__agendamento__form--row__btn ">Agendar</button>
+                    <input id="dataHora" type="datetime-local"  class=" input superior__agendamento__form--row__input" >
+                    <button class="btn btn-primary superior__agendamento__form--row__btn " >Agendar</button>
                 </div>
             </form>
         </section>

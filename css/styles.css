@@ -580,7 +580,7 @@
   justify-content: center;
   padding-bottom: 50px;
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .team {
     flex-direction: row;
   }
@@ -593,6 +593,11 @@
   flex-direction: column;
   gap: 10px;
   margin: auto;
+}
+@media (min-width: 900px) {
+  .team__ourTeam__info {
+    flex-direction: row;
+  }
 }
 .team__ourTeam__info--member-1 {
   display: flex;
